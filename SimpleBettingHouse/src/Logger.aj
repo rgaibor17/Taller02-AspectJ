@@ -1,20 +1,28 @@
 
-public aspect Logger {
-	 
-	 pointcut success() : call(* create*(..) );
-	    after() : success() {
-	    //Aspecto ejemplo: solo muestra este mensaje despu�s de haber creado un usuario 
-	    	System.out.println("**** User created ****");
+ 
+
+	import com.bettinghouse.Person;
+	import com.bettinghouse.User;
+
+	public aspect Logger {
+	
+	
+	File file = new File("Register.txt");
+	File file2 = new File("Log.txt");
+	    Calendar cal;
+	    User user;
+	    
+	    
+	    pointcut registrarUsuario(User user, Person person): call(* successfulSignUp(User, Person)) && args(user, person);
+	    
+	    after(User user, Person person) : registrarUsuario(user, person) {
+	    this.cal = Calendar.getInstance();
+	    try(PrintWriter pw=new PrintWriter(new FileOutputStream(file,true))){
+	    pw.println("Usuario registrado: ["+user+"]    Fecha: ["+cal.getTime() + "]");
+	    System.out.println("****Usuario ["+user.getNickname()+"] Registrado**** "+cal.getTime());
+	    }catch(FileNotFoundException e){System.out.println(e.getMessage());}    
 	    }
+	
 }
 
-public aspect Log {
 
-    File file = new File("log.txt");
-    Calendar cal = Calendar.getInstance();
-    //Aspecto: Deben hacer los puntos de cortes (pointcut) para crear un log con los tipos de transacciones realizadas.
-    pointcut success() : call(* create*(..) );
-    after() : success() {
-    	System.out.println("**** User created ****");
-    }
-}
