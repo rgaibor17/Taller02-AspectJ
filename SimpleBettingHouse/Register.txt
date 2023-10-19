@@ -1,4 +1,2 @@
 Usuario registrado: [nickname = fiorella, password = fiorella]    Fecha: [Wed Oct 18 21:48:33 ECT 2023]
-Sesión iniciada por usuario: [fiorella]    Fecha: [Wed Oct 18 21:49:01 ECT 2023]
-Sesión cerrada por usuario: [fiorella]    Fecha: [Wed Oct 18 21:49:17 ECT 2023]
 Usuario registrado: [nickname = e, password = e]    Fecha: [Wed Oct 18 22:19:41 ECT 2023]
