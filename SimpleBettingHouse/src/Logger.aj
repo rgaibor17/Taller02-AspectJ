@@ -34,7 +34,7 @@
 	    
 	    after(User user) : iniciarSesionUsuario(user) {
 	    this.cal = Calendar.getInstance();
-	    try(PrintWriter pw=new PrintWriter(new FileOutputStream(file,true))){
+	    try(PrintWriter pw=new PrintWriter(new FileOutputStream(file2,true))){
 	    pw.println("Sesión iniciada por usuario: ["+user.getNickname()+"]    Fecha: ["+cal.getTime() + "]");
 	    System.out.println("Sesión iniciada por usuario: ["+user.getNickname()+"]    Fecha: ["+cal.getTime() + "]");
 	    }catch(FileNotFoundException e){System.out.println(e.getMessage());}    
@@ -44,7 +44,7 @@
 	    
 	    after(User user) : cerrarSesionUsuario(user) {
 	    this.cal = Calendar.getInstance();
-	    try(PrintWriter pw=new PrintWriter(new FileOutputStream(file,true))){
+	    try(PrintWriter pw=new PrintWriter(new FileOutputStream(file2,true))){
 	    pw.println("Sesión cerrada por usuario: ["+user.getNickname()+"]    Fecha: ["+cal.getTime() + "]");
 	    System.out.println("Sesión cerrada por usuario: ["+user.getNickname()+"]    Fecha: ["+cal.getTime() + "]");
 	    }catch(FileNotFoundException e){System.out.println(e.getMessage());}    
