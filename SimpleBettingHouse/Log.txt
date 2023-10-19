@@ -1,0 +1,2 @@
+Sesión iniciada por usuario: [e]    Fecha: [Wed Oct 18 22:21:36 ECT 2023]
+Sesión cerrada por usuario: [e]    Fecha: [Wed Oct 18 22:21:47 ECT 2023]
