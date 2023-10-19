@@ -24,7 +24,7 @@
 	    
 	    after(User user, Person person) : registrarUsuario(user, person) {
 	    this.cal = Calendar.getInstance();
-	    try(PrintWriter pw=new PrintWriter(new FileOutputStream(file,true))){
+	    try(PrintWriter pw=new PrintWriter(new FileOutputStream(file2,true))){
 	    pw.println("Usuario registrado: ["+user.toString()+"]    Fecha: ["+cal.getTime() + "]");
 	    System.out.println("****Usuario ["+user.getNickname()+"] Registrado**** "+cal.getTime());
 	    }catch(FileNotFoundException e){System.out.println(e.getMessage());}    
