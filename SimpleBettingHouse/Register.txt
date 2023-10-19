@@ -1,2 +1,3 @@
 Usuario registrado: [nickname = fiorella, password = fiorella]    Fecha: [Wed Oct 18 21:48:33 ECT 2023]
 Usuario registrado: [nickname = e, password = e]    Fecha: [Wed Oct 18 22:19:41 ECT 2023]
+Usuario registrado: [nickname = Fiorella, password = fiorella]    Fecha: [Wed Oct 18 22:44:15 ECT 2023]
